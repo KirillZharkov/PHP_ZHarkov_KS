@@ -1,0 +1,28 @@
+{
+  "name": "kirillzharkov/php_zharkov_ks",
+  "description": "Implementation of a php program on the topic \"Calculator\"",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "KirillZharkov\\calculator\\": "src/"
+    },
+    "files": [
+      "src/Controller.php",
+      "src/View.php"
+    ]
+  },
+  "bin": [
+    "bin/calculator"
+  ],
+  "authors": [
+    {
+      "name": "KirillZharkov",
+      "email": "kiryshazharkov@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "wp-cli/php-cli-tools": "^0.12.0"
+  }
+}
