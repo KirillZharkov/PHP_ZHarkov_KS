@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator Game</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f0f2f5;
+      }
+
+      .screen {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 20px 0;
+      }
+
+      h1,
+      h2 {
+        color: #2c3e50;
+        text-align: center;
+      }
+
+      button {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+        margin: 5px;
+      }
+
+      button:hover {
+        background: #2980b9;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        width: 200px;
+        margin: 10px 0;
+      }
+
+      #results-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+
+      #results-table th,
+      #results-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+
+      #results-table th {
+        background-color: #3498db;
+        color: white;
+      }
+
+      #results-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      #expression {
+        font-size: 24px;
+        font-weight: bold;
+        color: #2c3e50;
+        text-align: center;
+        margin: 20px 0;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 5px;
+      }
+
+      #result-message {
+        margin: 15px 0;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="start-screen" class="screen">
+      <h1>Игра "Калькулятор"</h1>
+      <form id="start-form">
+        <div style="text-align: center">
+          <input
+            type="text"
+            id="player-name"
+            placeholder="Ваше имя"
+            style="display: block; margin: 15px auto"
+          />
+          <button type="button" onclick="startGame()">Начать игру</button>
+          <button type="button" onclick="showResults()">Таблица лидеров</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="game-screen" class="screen" style="display: none">
+      <h2>Решите пример:</h2>
+      <div id="expression"></div>
+      <form id="answer-form" style="text-align: center">
+        <input
+          type="text"
+          id="player-answer"
+          placeholder="Ваш ответ"
+          style="display: block; margin: 20px auto"
+        />
+        <button type="button" onclick="submitAnswer()">Проверить</button>
+        <div id="result-message"></div>
+        <button type="button" onclick="showScreen('start-screen')">
+          Главное меню
+        </button>
+      </form>
+    </div>
+
+    <div id="results-screen" class="screen" style="display: none">
+      <h2>🏆 Результаты игроков</h2>
+      <table id="results-table"></table>
+      <div style="text-align: center">
+        <button onclick="showScreen('start-screen')">Назад</button>
+      </div>
+    </div>
+
+    <!-- Остальная часть скрипта без изменений -->
+    <script>
+      // ... (оставить оригинальный JavaScript код без изменений)
+    </script>
+  </body>
+</html>
